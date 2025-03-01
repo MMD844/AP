@@ -1,10 +1,14 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class questionsPage {
 
     public void create(JFrame frame) {
+        // Create font
+        Font font = new Font("Serif",Font.PLAIN,15);
+
         // Create and configure the panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
@@ -12,6 +16,7 @@ public class questionsPage {
 
         // Question 1
         JLabel question1 = new JLabel("چقدر رابط کاربری نرم افزار از نظر شما جذاب است؟");
+        question1.setFont(font);
         question1.setBounds(10, 10, 300, 20);
 
         JRadioButton radio1_1 = new JRadioButton("۱");
@@ -34,6 +39,7 @@ public class questionsPage {
 
         // Question 2
         JLabel question2 = new JLabel("آیا دسترسی به امکانات مختلف نرم افزار برای شما آسان است؟");
+        question2.setFont(font);
         question2.setBounds(10, 90, 300, 20);
 
 
@@ -57,6 +63,7 @@ public class questionsPage {
 
         // Question 3
         JLabel question3 = new JLabel("چقدر طراحی صفحات نرم افزار ساده و کاربرپسند است؟");
+        question3.setFont(font);
         question3.setBounds(10, 170, 300, 20);
 
         JRadioButton radio3_1 = new JRadioButton("۱");
@@ -79,6 +86,7 @@ public class questionsPage {
 
         // Question 4
         JLabel question4 = new JLabel("آیا رنگ ها و فونت های استفاده شده در نرم افزار مناسب هستند؟");
+        question4.setFont(font);
         question4.setBounds(10, 250, 350, 20);
 
         JRadioButton radio4_1 = new JRadioButton("۱");
@@ -101,6 +109,7 @@ public class questionsPage {
 
         // Next button to go to Page3
         JButton nextButton = new JButton("صفحه بعد");
+        nextButton.setFont(font);
         nextButton.setBounds(10, 320, 100, 20);
         nextButton.addActionListener(e -> {
             frame.remove(panel);
