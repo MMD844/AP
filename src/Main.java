@@ -21,6 +21,7 @@ public class Main {
 
         // Create title label
         JLabel title = new JLabel("فرم نظرسنجی");
+        title.setHorizontalAlignment(JLabel.CENTER);
 
         // Create start button
         JButton startButton = new JButton("شروع!");
