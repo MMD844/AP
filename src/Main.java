@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.text.StyledEditorKit;
+
 import packages.informationPage;
 
 import java.awt.*;
@@ -19,13 +21,18 @@ public class Main {
         panel.setBounds(0, 0, 600, 600);
         panel.setBackground(Color.YELLOW);
 
+        // Create font
+        Font font = new Font("Serif",Font.PLAIN,15);
+
         // Create title label
         JLabel title = new JLabel("Servey form");
+        title.setFont(font);
         title.setHorizontalAlignment(JLabel.CENTER);
 
         // Create start button
         JButton startButton = new JButton("Start!");
-
+        startButton.setFont(font);
+      
         // Add components to the panel
         panel.add(title, BorderLayout.NORTH);
         panel.add(startButton, BorderLayout.CENTER);

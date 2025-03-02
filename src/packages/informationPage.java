@@ -6,6 +6,9 @@ import java.awt.*;
 public class informationPage {
 
     public void create(JFrame frame) {
+        // Create font
+        Font font = new Font("Serif",Font.PLAIN,15);
+
         // Create the main panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
@@ -14,24 +17,31 @@ public class informationPage {
         panel.add(Box.createRigidArea(new Dimension(250,0)));
 
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("Name");
+        JLabel nameLabel = new JLabel("Name"); 
+        nameLabel.setFont(font);
         JTextField nameField = new JTextField(15);
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("Age");
+        JLabel ageLabel = new JLabel("Age"); 
+        ageLabel.setFont(font);
         JTextField ageField = new JTextField(15);
 
         // Email Label and Text Field
         JLabel emailLabel = new JLabel("Email");
+        emailLabel.setFont(font);
         JTextField emailField = new JTextField(15);
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("Familiraty level with similar software");
 
         JRadioButton level1 = new JRadioButton("Biginner");
-        JRadioButton level2 = new JRadioButton("Midium");
-        JRadioButton level3 = new JRadioButton("Advanced");
+        level1.setFont(font);
+        JRadioButton level2 = new JRadioButton("Midium");        
+        level2.setFont(font);
+        JRadioButton level3 = new JRadioButton("Advanced"); 
+        level3.setFont(font);
         JRadioButton level4 = new JRadioButton("Without recognition");
+        level4.setFont(font);
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -42,6 +52,8 @@ public class informationPage {
 
         // Next Page Button
         JButton nextButton = new JButton("Next page");
+        nextButton.setFont(font);
+
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);

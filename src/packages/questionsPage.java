@@ -6,6 +6,9 @@ import java.awt.*;
 public class questionsPage {
 
     public void create(JFrame frame) {
+        // Create font
+        Font font = new Font("Serif",Font.PLAIN,15);
+
         // Create and configure the panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
@@ -15,6 +18,7 @@ public class questionsPage {
 
         // Question 1
         JLabel question1 = new JLabel("How much attractive do you think software's user interface is?");
+        question1.setFont(font);
 
         JRadioButton radio1_1 = new JRadioButton("1");
         JRadioButton radio1_2 = new JRadioButton("2");
@@ -30,9 +34,8 @@ public class questionsPage {
         group1.add(radio1_5);
 
         // Question 2
-        JLabel question2 = new JLabel("Is it easy for you to access the various features of the software?");
-
-
+        JLabel question2 = new JLabel("Is it easy for you to access the various features of the software?"); 
+        question2.setFont(font);
         JRadioButton radio2_1 = new JRadioButton("1");
         JRadioButton radio2_2 = new JRadioButton("2");
         JRadioButton radio2_3 = new JRadioButton("3");
@@ -48,12 +51,13 @@ public class questionsPage {
 
         // Question 3
         JLabel question3 = new JLabel("How much simple and user-friendly is software page design?");
-
+        question3.setFont(font);
         JRadioButton radio3_1 = new JRadioButton("1");
         JRadioButton radio3_2 = new JRadioButton("2");
         JRadioButton radio3_3 = new JRadioButton("3");
         JRadioButton radio3_4 = new JRadioButton("4");
         JRadioButton radio3_5 = new JRadioButton("5");
+
 
         ButtonGroup group3 = new ButtonGroup();
         group3.add(radio3_1);
@@ -64,6 +68,7 @@ public class questionsPage {
 
         // Question 4
         JLabel question4 = new JLabel("Are the colors and font used in the software appropriate?");
+        question4.setFont(font);
 
         JRadioButton radio4_1 = new JRadioButton("۱");
         JRadioButton radio4_2 = new JRadioButton("۲");
@@ -80,6 +85,7 @@ public class questionsPage {
 
         // Next button to go to Page3
         JButton nextButton = new JButton("Next page");
+        nextButton.setFont(font);
         nextButton.addActionListener(e -> {
             frame.remove(panel);
             frame.revalidate();
